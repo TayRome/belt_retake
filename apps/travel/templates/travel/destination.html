@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Destination</title>
+</head>
+<body>
+<div class = "container">
+    <div class = "row m-3">
+        <div class = "col-md-4 offset-md-8">
+            <a href = "/travel"><button class = "btn btn-info d-inline-block">Home</button></a>
+            <a href = "/logout"><button class = "btn btn-info d-inline-block">Logout</button></a>
+        </div>
+    </div>
+    <h2>{{travel.destination}}</h2>
+    <h4>Planned By: {{travel.planned_by.name}}</h4>
+    <h4>Description: {{travel.description}}</h4>
+    <h4>Travel Date From: {{travel.travel_date_from}}</h4>
+    <h4>Travel Date To: {{travel.travel_date_to}}</h4>
+    <br>
+    <h3>Other users joining the trip:</h3>
+    {% for user in joined %}
+        <h4>{{user.name}}</h4>
+    {% endfor %}
+
+
+</div>
+</body>
+</html>
+
